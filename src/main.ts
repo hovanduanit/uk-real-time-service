@@ -7,7 +7,7 @@ async function bootstrap() {
   // 🔹 Khởi động HTTP Server (REST API)
   const app = await NestFactory.create(AppModule);
   await app.listen(6002);
-  console.log('🚀 HTTP Server is running on port 3000...');
+  console.log('🚀 HTTP Server is running on port 6002 ...');
 
   // 🔹 Khởi động gRPC Server
   const grpcApp = await NestFactory.createMicroservice<MicroserviceOptions>(AppModule, {

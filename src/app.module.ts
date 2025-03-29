@@ -1,10 +1,11 @@
 import { Module } from '@nestjs/common';
-import { GrpcClientService } from './grpc/grpc.client';
-import { AccountModule } from './account/account.module';
-import { ProductModule } from './product/product.module';
+import { HeroModule } from './hero/hero.module';
+import { DownloadTemplateController } from './download-template/download-template.controller';
+import { DownloadTemplateService } from './download-template/download-template.service';
+import { DownloadTemplateModule } from './download-template/download-template.module';
 
 @Module({
-  imports: [AccountModule, ProductModule],
+  imports: [HeroModule, DownloadTemplateModule],
   controllers: [],
   providers: [],
 })
